@@ -1,0 +1,2 @@
+{"name": "plasma-ai", "version": "1.0.0", "description": "A next-generation, AI-powered cybersecurity platform with plasma-enhanced visual identity", "scripts": {"dev": "python -m http.server 3000", "build": "echo 'Static site - no build needed'", "start": "python -m http.server 3000"}, "keywords": ["cybersecurity", "ai", "plasma", "security", "automation"], "author": "Devmonix Technologies", "license": "MIT", "repository": {"type": "git", "url": "https://github.com/devmonixtechnologies/plasma"}, "homepage": "https://plasma-ai.vercel.app"}
+}

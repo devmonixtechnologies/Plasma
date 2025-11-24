@@ -1,0 +1,9 @@
+[submodule "benchmarks/cti_bench"]
+	path = benchmarks/cti_bench
+	url = https://github.com/xashru/cti-bench.git
+[submodule "benchmarks/seceval"]
+	path = benchmarks/seceval
+	url = https://github.com/XuanwuAI/SecEval.git
+[submodule "benchmarks/cybermetric"]
+	path = benchmarks/cybermetric
+	url = https://github.com/cybermetric/CyberMetric.git

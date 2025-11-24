@@ -1,0 +1,35 @@
+[
+    {
+        "id": "282cd7f6-86f9-4174-95c2-df26b2b6395e",
+        "source": "android_sec_doc",
+        "question": "You are tasked with designing a secure storage system for an Android device's hardware identifiers as part of an ID attestation implementation. Which of the following properties are essential for ensuring the system's integrity and security?",
+        "choices": [
+            "A: The storage must contain the original identifiers to enable the TEE to verify their authenticity during attestation.",
+            "B: The storage should be tamper-evident to ensure any modification is detectable, rendering the attestation invalid.",
+            "C: The `destroyAttestationIds()` method should be able to restore the identifier-derived data after a factory reset.",
+            "D: RMA facilities must not have the ability to regenerate hardware identifier-derived data to prevent unauthorized attestation."
+        ],
+        "answer": "B",
+        "topics": [
+            "SystemSecurity",
+            "Vulnerability"
+        ],
+        "keyword": "Tamper-evident"
+    },
+    {
+        "id": "28355cb5-4b9a-44b8-8419-38fd17d335e4",
+        "source": "owasp_mastg",
+        "question": "An Android application developer is tasked with ensuring the security of sensitive user information. The developer has several options for data storage, each with different security implications. Which of the following storage options should the developer avoid to prevent exposing sensitive user data to other applications on the device?",
+        "choices": [
+            "A: Using SharedPreferences with MODE_PRIVATE to store user preferences and settings.",
+            "B: Storing user credentials in an unencrypted SQLite database accessible to the app.",
+            "C: Implementing SQLCipher to encrypt SQLite databases containing sensitive user information.",
+            "D: Saving encrypted user data in the Android Keystore system."
+        ],
+        "answer": "B",
+        "topics": [
+            "ApplicationSecurity"
+        ],
+        "keyword": "SQLite"
+    }
+]

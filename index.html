@@ -1,0 +1,156 @@
+<\!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plasma AI - Next-Generation Cybersecurity Platform</title>
+    <meta name="description" content="A next-generation, AI-powered cybersecurity platform with plasma-enhanced visual identity">
+    <link rel="stylesheet" href="docs/stylesheets/extra.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(-45deg, #6366f1, #8b5cf6, #4f46e5, #7c3aed);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .logo {
+            width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .tagline {
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .feature {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 15px 25px;
+            color: white;
+            font-weight: 500;
+        }
+        .banner {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .banner img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .developer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            font-size: 1.2rem;
+            margin-top: 40px;
+        }
+        .particles::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: radial-gradient(2px 2px at 20% 30%, rgba(99, 102, 241, 0.3), transparent), radial-gradient(2px 2px at 60% 70%, rgba(139, 92, 246, 0.3), transparent), radial-gradient(1px 1px at 50% 50%, rgba(79, 70, 229, 0.3), transparent), radial-gradient(1px 1px at 80% 10%, rgba(124, 58, 237, 0.3), transparent);
+            background-size: 200px 200px;
+            animation: float 20s linear infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-100px); }
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+        }
+    </style>
+</head>
+<body class="particles">
+    <div class="container">
+        <div class="header">
+            <img src="media/plasma-logo-modern.svg" alt="Plasma AI Logo" class="logo">
+            <h1>Plasma AI</h1>
+            <p class="tagline">A next-generation, AI-powered cybersecurity platform with plasma-enhanced visual identity</p>
+            
+            <div class="features">
+                <div class="feature">⚡ Plasma-powered security agents</div>
+                <div class="feature">🛡️ Advanced threat detection</div>
+                <div class="feature">🤖 AI-driven automation</div>
+                <div class="feature">🚀 Modern indigo/violet theme</div>
+                <div class="feature">🦜 Parrot OS support</div>
+            </div>
+
+            <a href="https://github.com/devmonixtechnologies/plasma" class="cta-button">View on GitHub</a>
+            <a href="#docs" class="cta-button">Documentation</a>
+        </div>
+
+        <div class="banner">
+            <img src="media/plasma-banner.svg" alt="Plasma AI Security Platform">
+        </div>
+
+        <div class="developer">
+            <strong>Developed by Devmonix Technologies</strong>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactive plasma effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const features = document.querySelectorAll('.feature');
+            features.forEach((feature, index) => {
+                feature.style.animationDelay = `${index * 0.1}s`;
+                feature.style.animation = 'fadeInUp 0.6s ease forwards';
+            });
+        });
+    </script>
+</body>
+</html>

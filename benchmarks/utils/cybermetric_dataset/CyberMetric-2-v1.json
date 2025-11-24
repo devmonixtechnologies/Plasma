@@ -1,0 +1,26 @@
+{
+  "questions": [
+
+{
+  "question": "What is the primary requirement for an Random Bit Generator's (RBG) output to be used for generating cryptographic keys?",
+  "answers": {
+    "A": "The RBG's output should have a length that matches the target data to be protected",
+    "B": "The RBG's output should be computationally indistinguishable from random bits and provide sufficient entropy to support the security strength required for the target data",
+    "C": "The RBG's output should be as long as possible to ensure maximal randomness",
+    "D": "The RBG's output should have precisely the same length as the symmetric key to be generated"
+  },
+  "solution": "B"
+},
+{
+  "question": "In cryptography, what is the purpose of using a key-derivation function (KDF)?",
+  "answers": {
+    "A": "Generate public keys",
+    "B": "Authenticate digital signatures",
+    "C": "Encrypt data using a password",
+    "D": "KDF are algorithms used to transform a secret into crucial parameters like keys and Initialization Vectors (IVs)"
+  },
+  "solution": "D"
+}
+
+  ]
+}

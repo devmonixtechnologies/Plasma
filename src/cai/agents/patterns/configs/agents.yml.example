@@ -1,0 +1,30 @@
+# Example agents.yml configuration file
+# This file is auto-loaded when CAI starts
+# Copy this to agents.yml and customize for your needs
+
+parallel_agents:
+  # Each agent can have a name, optional model, optional prompt, and optional unified_context
+  - name: one_tool_agent
+    model: claude-sonnet-4-20250514
+    prompt: "Focus on finding vulnerabilities and security issues"
+    unified_context: false  # Each agent has its own message history (default)
+    
+  - name: blueteam_agent
+    model: claude-sonnet-4-20250514
+    prompt: "Focus on defensive security and mitigation strategies"
+    unified_context: false
+    
+  - name: bug_bounter_agent
+    model: alias0
+    prompt: "Search for bugs and create detailed reports"
+    unified_context: false
+
+# Example with unified context (agents share message history)
+# parallel_agents:
+#   - name: redteam_agent
+#     unified_context: true  # Share message history with other unified agents
+#   - name: blueteam_agent
+#     unified_context: true  # Share message history with other unified agents
+
+# When 2 or more agents are configured, parallel mode is automatically enabled
+# The agents will be available for selection when you enter a prompt

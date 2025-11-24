@@ -1,0 +1,95 @@
+.use_base_container: &use_base_container
+  stage: benchmarks
+  image: "${CI_REGISTRY_IMAGE}:latest"
+  services:
+    - name: docker:dind
+      alias: docker
+
+.run_benchmarks: &run_benchmarks
+  <<: *use_base_container
+  script:
+    - pip3 install -e .
+    - pip install litellm langchain transformers torch openai tqdm cvss python-dotenv
+    - echo "Checking environment variables..."
+
+    - |
+      for var in $(compgen -e); do
+        if [[ ($var == CTF_* || $var == *_API_KEY || $var == *_API_BASE) && -n ${!var} ]]; then
+          export $var="${!var}"          
+        fi
+      done
+
+    - echo $OLLAMA_API_BASE
+    - python3 benchmarks/eval.py --model $MODEL_NAME --dataset_file $BENCHMARK_FILE --eval $BENCHMARK_NAME --backend $BACKEND
+    - pwd
+    - ls -la benchmarks/outputs/$BENCHMARK_NAME/
+    - curl http://host.docker.internal:8000/api/tags # http://localhost:8000/api/tags 
+  variables:
+    OLLAMA_API_BASE: "http://host.docker.internal:8000" # http://localhost:8000
+    OPENROUTER_API_BASE: "https://openrouter.ai/api/v1"
+    OPENAI_API_BASE: "https://api.openai.com/v1"
+  artifacts:
+    paths:
+      - benchmarks/outputs/
+    expire_in: 12 month
+  tags:
+    - p40
+    - x86
+  rules:
+    - if: $CI_COMMIT_BRANCH
+      when: on_success
+
+
+
+benchmarks-test-cybermetric-ollama:
+  <<: *run_benchmarks
+  variables:
+    MODEL_NAME: "ollama/qwen2.5:14b"
+    BENCHMARK_FILE: "benchmarks/utils/cybermetric_dataset/CyberMetric-2-v1.json"
+    BENCHMARK_NAME: "cybermetric"
+    BACKEND: "ollama"
+    OLLAMA_API_BASE: "http://localhost:8000"
+
+
+# # benchmarks-test-seceval:
+# #   <<: *run_benchmarks
+# #   variables:
+# #     OLLAMA_API_BASE: "http://localhost:8000"
+# #     OPENROUTER_API_BASE: "https://openrouter.ai/api/v1"
+# #     OPENAI_API_KEY: "fake-api-key"
+# #   script:
+# #     - pip3 install -e .
+# #     - pip install -r benchmarks/seceval/eval/requirements.txt
+# #     - python3 benchmarks/seceval/eval/eval.py --dataset_file benchmarks/utils/seceval_dataset/questions-2.json --output_dir benchmarks/seceval/eval/outputs --backend ollama --models ollama/qwen2.5:14b
+
+benchmarks-test-cybermetric-openrouter:
+  <<: *run_benchmarks
+  variables:
+    MODEL_NAME: "openrouter/qwen/qwen3-32b:free"
+    BENCHMARK_FILE: "benchmarks/utils/cybermetric_dataset/CyberMetric-2-v1.json"
+    BENCHMARK_NAME: "cybermetric"
+    BACKEND: "openrouter"
+
+benchmarks-test-seceval-openrouter:
+  <<: *run_benchmarks
+  variables:
+    MODEL_NAME: "openrouter/qwen/qwen3-32b:free"
+    BENCHMARK_FILE: "benchmarks/utils/seceval_dataset/questions-2.json"
+    BENCHMARK_NAME: "seceval"
+    BACKEND: "openrouter"
+
+benchmarks-test-cti_bench-openrouter:
+  <<: *run_benchmarks
+  variables:
+    MODEL_NAME: "openrouter/qwen/qwen3-32b:free"
+    BENCHMARK_FILE: "benchmarks/utils/cti_bench_dataset/cti-mcq1.tsv"
+    BENCHMARK_NAME: "cti_bench"
+    BACKEND: "openrouter"
+
+# benchmarks-test-cti_bench-openai:
+#   <<: *run_benchmarks
+#   variables:
+#     MODEL_NAME: "gpt-4o-mini"
+#     BENCHMARK_FILE: "benchmarks/utils/cti_bench_dataset/cti-mcq1.tsv"
+#     BENCHMARK_NAME: "cti_bench"
+#     BACKEND: "openai"

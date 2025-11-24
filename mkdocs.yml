@@ -1,0 +1,223 @@
+site_name: CAI
+theme:
+  name: material
+  features:
+    # Allows copying code blocks
+    - content.code.copy
+    # Allows selecting code blocks
+    - content.code.select
+    # Shows the current path in the sidebar
+    - navigation.path
+    # Shows sections in the sidebar
+    - navigation.sections
+    # Shows sections expanded by default
+    - navigation.expand
+    # Enables annotations in code blocks
+    - content.code.annotate
+  palette:
+    primary: custom
+  logo: assets/imago.png
+  favicon: assets/imago.png
+  icon:
+    repo: fontawesome/brands/github
+repo_url: https://github.com/aliasrobotics/cai
+repo_name: aliasrobotics/cai
+nav:
+  # ========================================
+  # GETTING STARTED (Simplificado)
+  # ========================================
+  - Getting Started:
+      - Welcome: index.md
+      - Installation: cai_installation.md
+      - Quickstart: cai_quickstart.md
+
+  # ========================================
+  # CAI PRO (EXPANDIDO - COMERCIAL) ⭐
+  # ========================================
+  - 'Professional Edition':
+      - '🤔 Why CAI PRO?': cai_pro.md
+      - '⭐ Alias1 Model': cai_pro_alias1.md
+      - '🔥 Exclusive Features': cai_pro_features.md
+      - '⭐ API Server (CAI PRO)': api.md
+      - '💰 Pricing & Plans': cai_pro_pricing.md
+      - '🚀 Get Started with PRO': cai_pro_quickstart.md
+      - '📞 Contact Sales': cai_pro_contact.md
+
+  # ========================================
+  # USER INTERFACES (NUEVO AGRUPAMIENTO)
+  # ========================================
+  - User Interfaces:
+      # Terminal UI (TUI) - Subsección
+      - Terminal UI (TUI):
+          - Overview: tui/tui_index.md
+          - Getting Started: tui/getting_started.md
+          - User Interface: tui/user_interface.md
+          - Terminals Management: tui/terminals_management.md
+          - Teams & Parallel Execution: tui/teams_and_parallel_execution.md
+          - Sidebar Features: tui/sidebar_features.md
+          - Keyboard Shortcuts: tui/keyboard_shortcuts.md
+          - Commands Reference: tui/commands_reference.md
+          - Advanced Features: tui/advanced_features.md
+          - Troubleshooting: tui/troubleshooting.md
+      
+      # Command Line Interface (CLI) - Subsección
+      - Command Line Interface (CLI):
+          - Overview: cli/cli_index.md
+          - Getting Started: cli/getting_started.md
+          - Commands Reference: cli/commands_reference.md
+          - Advanced Usage: cli/advanced_usage.md
+
+  # ========================================
+  # CORE CONCEPTS
+  # ========================================
+  - Core Concepts:
+      - Architecture: cai_architecture.md
+      - Agents: agents.md
+      - Tools: tools.md
+      - Handoffs: handoffs.md
+      - Multi-Agent Systems: multi_agent.md
+
+  # ========================================
+  # MODELS & PROVIDERS (REORGANIZADO)
+  # ========================================
+  - Models & Providers:
+      # TODO: Crear página destacada para Alias Models
+      # - '⭐ Alias Models (CAI PRO)': cai_alias_models.md
+      - Available Models: cai_list_of_models.md
+      - Model Providers:
+          - OpenRouter: providers/openrouter.md
+          - Ollama: providers/ollama.md
+          - Azure OpenAI: providers/azure.md
+
+  # ========================================
+  # GUIDES
+  # ========================================
+  - Guides:
+      - Running Agents: running_agents.md
+      - Continue Mode: continue_mode.md
+      - Working with Results: results.md
+      - Streaming: streaming.md
+      - Tracing & Debugging: tracing.md
+      - Context Management: context.md
+      - Guardrails & Security: guardrails.md
+      - Environment Variables: environment_variables.md
+
+  # ========================================
+  # BENCHMARKING (CREDIBILIDAD)
+  # ========================================
+  - Benchmarking:
+      - Overview: benchmarking/overview.md
+      - Running Benchmarks: benchmarking/running_benchmarks.md
+      - Attack & Defense CTFs: benchmarking/attack_defense.md
+      - Jeopardy CTFs: benchmarking/jeopardy_ctfs.md
+      - Cyber Ranges: benchmarking/cyber_ranges.md
+      - Knowledge Benchmarks: benchmarking/knowledge_benchmarks.md
+      - Privacy Benchmarks: benchmarking/privacy_benchmarks.md
+
+  # ========================================
+  # RESEARCH (CREDIBILIDAD CIENTÍFICA)
+  # ========================================
+  - Research:
+      - Overview: research.md
+      # TODO: Opcional - expandir research
+      # - Publications: research_publications.md
+
+  # ========================================
+  # API REFERENCE (TÉCNICO)
+  # ========================================
+  - API Reference:
+      - Agents:
+          - Agent: ref/agent.md
+          - Runner: ref/run.md
+          - Tool: ref/tool.md
+          - Result: ref/result.md
+          - Stream Events: ref/stream_events.md
+          - Handoffs: ref/handoffs.md
+          - Lifecycle: ref/lifecycle.md
+          - Items: ref/items.md
+          - Run Context: ref/run_context.md
+          - Usage: ref/usage.md
+          - Exceptions: ref/exceptions.md
+          - Guardrail: ref/guardrail.md
+          - Model Settings: ref/model_settings.md
+          - Agent Output: ref/agent_output.md
+          - Function Schema: ref/function_schema.md
+      - Models:
+          - Interface: ref/models/interface.md
+          - OpenAI Chat Completions: ref/models/openai_chatcompletions.md
+          - OpenAI Responses: ref/models/openai_responses.md
+      - Extensions:
+          - Handoff Filters: ref/extensions/handoff_filters.md
+          - Handoff Prompt: ref/extensions/handoff_prompt.md
+
+  # ========================================
+  # ADVANCED
+  # ========================================
+  - Advanced:
+      - Development: cai_development.md
+
+  # ========================================
+  # RESOURCES
+  # ========================================
+  - Resources:
+      - FAQ: cai_faq.md
+      - Find Us: cai_find_us.md
+      - Citation & Acknowledgments: cai_citation_and_acknowledgments.md
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["src"]
+          options:
+            docstring_style: google
+            # Shows links to other members in signatures
+            signature_crossrefs: true
+            # Orders members by source order, rather than alphabetical
+            members_order: source
+            # Puts the signature on a separate line from the member name
+            separate_signature: true
+            # Shows type annotations in signatures
+            show_signature_annotations: true
+            # Makes the font sizes nicer
+            heading_level: 3
+            # Show inherited members
+            inherited_members: true
+
+extra:
+  # Remove material generation message in footer
+  generator: false
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: pymdownx.superfences.fence_code_format
+  - admonition
+  - codehilite
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+dev_addr: localhost:8088
+
+extra_css:
+  - stylesheets/extra.css
+
+watch:
+  - "src/cai/sdk/agents"
