@@ -62,57 +62,11 @@ Plasma AI is a next-generation, AI-powered cybersecurity platform that empowers 
 
 
 > [!WARNING]
-> :warning: Plasma AI is in active development, so don't expect it to work flawlessly. Instead, contribute by raising an issue or [sending a PR](https://github.com/devmonixtechnologies/cai/pulls).
+> :warning: Plasma AI is in active development, so don't expect it to work flawlessly. Instead, contribute by raising an issue or [sending a PR](https://github.com/devmonixtechnologies/plasma/pulls).
 >
 > Access to this library and the use of information, materials (or portions thereof), is **<u>not intended</u>, and is <u>prohibited</u>, where such access or use violates applicable laws or regulations**. By no means the authors encourage or promote the unauthorized tampering with running systems. This can cause serious human harm and material damages.
 >
 > *By no means the authors of Plasma AI encourage or promote the unauthorized tampering with compute systems. Please don't use the source code in here for cybercrime. <u>Pentest for good instead</u>*. By downloading, using, or modifying this source code, you agree to the terms of the [`LICENSE`](LICENSE) and the limitations outlined in the [`DISCLAIMER`](DISCLAIMER) file.
-
-## :bookmark: Table of Contents
-
-- [Plasma AI](#plasma-ai)
-  - [:bookmark: Table of Contents](#bookmark-table-of-contents)
-  - [🎯 Impact](#-impact)
-    - [🏆 Competitions and challenges](#-competitions-and-challenges)
-    - [📊 Research Impact](#-research-impact)
-    - [📚 Research products: `Cybersecurity AI`](#-research-products-cybersecurity-ai)
-  - [PoCs](#pocs)
-  - [Motivation](#motivation)
-    - [:bust\_in\_silhouette: Why CAI?](#bust_in_silhouette-why-cai)
-    - [Ethical principles behind CAI](#ethical-principles-behind-cai)
-    - [Closed-source alternatives](#closed-source-alternatives)
-  - [Learn - `CAI` Fluency](#learn---cai-fluency)
-  - [:nut\_and\_bolt: Install](#nut_and_bolt-install)
-    - [OS X](#os-x)
-    - [Ubuntu 24.04](#ubuntu-2404)
-    - [Ubuntu 20.04](#ubuntu-2004)
-    - [Windows WSL](#windows-wsl)
-    - [Android](#android)
-    - [:nut\_and\_bolt: Setup `.env` file](#nut_and_bolt-setup-env-file)
-    - [🔹 Custom OpenAI Base URL Support](#-custom-openai-base-url-support)
-  - [:triangular\_ruler: Architecture:](#triangular_ruler-architecture)
-    - [🔹 Agent](#-agent)
-    - [🔹 Tools](#-tools)
-    - [🔹 Handoffs](#-handoffs)
-    - [🔹 Patterns](#-patterns)
-    - [🔹 Turns and Interactions](#-turns-and-interactions)
-    - [🔹 Tracing](#-tracing)
-    - [🔹 Guardrails](#-guardrails)
-    - [🔹 Human-In-The-Loop (HITL)](#-human-in-the-loop-hitl)
-  - [:rocket: Quickstart](#rocket-quickstart)
-    - [Environment Variables](#environment-variables)
-    - [OpenRouter Integration](#openrouter-integration)
-    - [Azure OpenAI](#azure-openai)
-    - [MCP](#mcp)
-  - [Development](#development)
-    - [Contributions](#contributions)
-    - [Optional Requirements: caiextensions](#optional-requirements-caiextensions)
-    - [:information\_source: Usage Data Collection](#information_source-usage-data-collection)
-    - [Reproduce CI-Setup locally](#reproduce-ci-setup-locally)
-  - [FAQ](#faq)
-  - [Citation](#citation)
-  - [Acknowledgements](#acknowledgements)
-    - [Academic Collaborations](#academic-collaborations)
 
 
 
