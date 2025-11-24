@@ -18,42 +18,10 @@
 
 ---
 
-<div align="center">
-  <img src="https://github.com/devmonixtechnologies/cai/raw/main/media/plasma-banner.svg" alt="Plasma AI Security Platform" width="800"/>
-</div>
-
-<div align="center">
 
 
-<a href="https://trendshift.io/repositories/14317" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14317" alt="aliasrobotics%2Fcai | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-<a href="https://defiant.vc/api/european-open-source/badge?domain=aliasrobotics.com&style=most-starred-top-3" target="_blank"><img src="https://defiant.vc/api/european-open-source/badge?domain=aliasrobotics.com&style=most-starred-top-3" alt="European Open Source - Most Starred Top 3" style=" height: 75px;" height="75"/></a>
-<a href="https://defiant.vc/api/european-open-source/badge?domain=aliasrobotics.com&style=most-forked-top-3" target="_blank"><img src="https://defiant.vc/api/european-open-source/badge?domain=aliasrobotics.com&style=most-forked-top-3" alt="European Open Source - Most Forked Top 3" style="height: 75px;" height="75"/></a>
+Alternative HTML version (kept as comment for reference)
 
-
-
-[![version](https://badge.fury.io/py/plasma-framework.svg)](https://badge.fury.io/py/plasma-framework)
-[![downloads](https://static.pepy.tech/badge/plasma-framework)](https://pepy.tech/projects/plasma-framework)
-[![Linux](https://img.shields.io/badge/Linux-Supported-6366f1?logo=linux&logoColor=white)](https://github.com/devmonixtechnologies/cai)
-[![Parrot OS](https://img.shields.io/badge/Parrot%20OS-Supported-8b5cf6?logo=parrot&logoColor=white)](https://github.com/devmonixtechnologies/cai)
-[![OS X](https://img.shields.io/badge/OS%20X-Supported-6366f1?logo=apple&logoColor=white)](https://github.com/devmonixtechnologies/cai)
-[![Windows](https://img.shields.io/badge/Windows-Supported-8b5cf6?logo=windows&logoColor=white)](https://github.com/devmonixtechnologies/cai)
-[![Android](https://img.shields.io/badge/Android-Supported-6366f1?logo=android&logoColor=white)](https://github.com/devmonixtechnologies/cai)
-[![Discord](https://img.shields.io/badge/Discord-7289DA?logo=discord&logoColor=white)](https://discord.gg/fnUFcTaQAC)
-[![arXiv](https://img.shields.io/badge/arXiv-2504.06017-b31b1b.svg)](https://arxiv.org/pdf/2504.06017)
-[![arXiv](https://img.shields.io/badge/arXiv-2506.23592-b31b1b.svg)](https://arxiv.org/pdf/2506.23592)
-[![arXiv](https://img.shields.io/badge/arXiv-2508.13588-b31b1b.svg)](https://arxiv.org/pdf/2508.13588)
-[![arXiv](https://img.shields.io/badge/arXiv-2508.21669-b31b1b.svg)](https://arxiv.org/pdf/2508.21669)
-[![arXiv](https://img.shields.io/badge/arXiv-2509.14096-b31b1b.svg)](https://arxiv.org/pdf/2509.14096) 
-[![arXiv](https://img.shields.io/badge/arXiv-2509.14139-b31b1b.svg)](https://arxiv.org/pdf/2509.14139)
-[![arXiv](https://img.shields.io/badge/arXiv-2510.17521-b31b1b.svg)](https://arxiv.org/pdf/2510.17521)
-[![arXiv](https://img.shields.io/badge/arXiv-2510.24317-b31b1b.svg)](https://arxiv.org/pdf/2510.24317)
-
-
-</div>
-
-
-<!-- Alternative HTML version (kept as comment for reference) -->
-<!--
 <div align="center">
   <table style="border-collapse: collapse; width: 100%; max-width: 900px; box-shadow: 0 4px 12px rgba(82, 157, 134, 0.15);">
     <tr>
@@ -94,7 +62,7 @@
     </tr>
   </table>
 </div>
--->
+
 
 
 Plasma AI is a next-generation, AI-powered cybersecurity platform that empowers security professionals with plasma-enhanced offensive and defensive automation. Plasma AI represents the evolution of AI Security, featuring advanced plasma energy effects and a modern visual identity while maintaining the battle-tested core that thousands of users trust. Whether you're a security researcher, ethical hacker, IT professional, or organization looking to enhance your security posture, Plasma AI provides the building blocks to create specialized AI agents that can assist with mitigation, vulnerability discovery, exploitation, and security assessment.
